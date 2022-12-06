@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        {{ mensagem }} <br>
+        Valor total: {{ valorTotal }} <br>
+        Logado: {{ logado }} <br>
+        Hobbies: {{ hobbies[0]}} <br>
+        Perfil: {{ perfil.email }}, {{ perfil.cursos[1].nome }}
+    </div>
+
+    <script>
+
+  
+        const vm = new Vue({
+            el: '#app',
+            data: { //variaveis/atributos reativos
+                mensagem: 'Primeiro template controlado pelo Vue', //string
+                valorTotal: 150.47, //numero
+                logado: false, //booleano
+                hobbies: [ //array
+                    'Games antigos',
+                    'futebol',
+                    'Correr'
+                ],
+                perfil: {
+                    nome: 'Marx Lima',
+                    email: 'marxmaciel@gmail.com',
+                    idade: 36,
+                    cursos: [
+                        {nome: 'laravel', cargaHoraria: '50horas'},
+                        {nome: 'Banco de Dados Relacionais'}
+                    ],
+                }
+            }
+        }) //vm = VewModel
+
+
+    </script>
+</body>
+</html>
